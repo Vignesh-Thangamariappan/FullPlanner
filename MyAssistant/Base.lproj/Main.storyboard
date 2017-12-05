@@ -10,14 +10,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="Login" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NaW-cC-Zqo">
+                                <rect key="frame" x="63" y="309" width="248" height="69"/>
+                                <state key="normal" image="facebook_login_button"/>
+                                <connections>
+                                    <action selector="fbLoginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyc-sw-SUL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NaW-cC-Zqo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CbJ-Ea-g1W"/>
+                            <constraint firstItem="NaW-cC-Zqo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ebq-Tb-2bW"/>
+                            <constraint firstItem="NaW-cC-Zqo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="pnV-JQ-FNv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NaW-cC-Zqo" secondAttribute="trailing" constant="64" id="zqv-f0-G4j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Grs-g7-uOy"/>
@@ -37,6 +52,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-b3-jyI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gul-Ec-rkJ" appends="YES" id="ff3-sm-4OJ"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,13 +67,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWv-uO-EAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gul-Ec-rkJ">
+                    <connections>
+                        <action selector="didLongPress:" destination="RVg-sh-9t5" id="FmH-rs-cLf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="-66.11694152923539"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jMd-Zg-hsr">
             <objects>
-                <tableViewController id="rbm-bI-QsJ" customClass="Settings" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rbm-bI-QsJ" customClass="SettingsTableViewController" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="LDw-I5-AKm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="79" y="-400"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="mcl-Ou-v2T">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xys-dP-LV7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xys-dP-LV7" customClass="MainNavigationController" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dux-WB-ayu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -186,4 +210,7 @@
             <point key="canvasLocation" x="-676" y="-401"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook_login_button" width="354" height="69"/>
+    </resources>
 </document>
