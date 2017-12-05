@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12C4A5C3BAECEF055D53EF14 /* Pods_MyAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */; };
 		CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB21FD54EA80047004F /* AppDelegate.swift */; };
-		CE2D1CB51FD54EA80047004F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB41FD54EA80047004F /* ViewController.swift */; };
+		CE2D1CB51FD54EA80047004F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB41FD54EA80047004F /* Login.swift */; };
 		CE2D1CB81FD54EA80047004F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CB61FD54EA80047004F /* Main.storyboard */; };
 		CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB91FD54EA80047004F /* MyAssistant.xcdatamodeld */; };
 		CE2D1CBD1FD54EA80047004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBC1FD54EA80047004F /* Assets.xcassets */; };
 		CE2D1CC01FD54EA80047004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */; };
+		CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B01FD6726600E605CF /* MapKit.framework */; };
+		CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B21FD672C500E605CF /* CoreLocation.framework */; };
+		CEEDE6B41FD5709000570CA4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B31FD5709000570CA4 /* Settings.swift */; };
+		CEEDE6B61FD5783A00570CA4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B51FD5783A00570CA4 /* Alert.swift */; };
+		CEEDE6B81FD57B7300570CA4 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B71FD57B7300570CA4 /* MainNavigation.swift */; };
+		CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B91FD66A3400570CA4 /* Maps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08BD1B7D4C947F4BABC926F6 /* Pods-MyAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.release.xcconfig"; sourceTree = "<group>"; };
+		16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D39FC06B897CB995D87FE3D /* Pods-MyAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2D1CAF1FD54EA70047004F /* MyAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D1CB21FD54EA80047004F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE2D1CB41FD54EA80047004F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE2D1CB41FD54EA80047004F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		CE2D1CB71FD54EA80047004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE2D1CBA1FD54EA80047004F /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
 		CE2D1CBC1FD54EA80047004F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2D1CBF1FD54EA80047004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2D1CC11FD54EA80047004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE99B8B01FD6726600E605CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE99B8B21FD672C500E605CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CEEDE6B31FD5709000570CA4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		CEEDE6B51FD5783A00570CA4 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		CEEDE6B71FD57B7300570CA4 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
+		CEEDE6B91FD66A3400570CA4 /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */,
+				CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */,
+				12C4A5C3BAECEF055D53EF14 /* Pods_MyAssistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4357CE1E3539405EB61C8B57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE99B8B21FD672C500E605CF /* CoreLocation.framework */,
+				CE99B8B01FD6726600E605CF /* MapKit.framework */,
+				16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC334912A506B9E9328CB48A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3D39FC06B897CB995D87FE3D /* Pods-MyAssistant.debug.xcconfig */,
+				08BD1B7D4C947F4BABC926F6 /* Pods-MyAssistant.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE2D1CA61FD54EA70047004F = {
 			isa = PBXGroup;
 			children = (
 				CE2D1CB11FD54EA70047004F /* MyAssistant */,
 				CE2D1CB01FD54EA70047004F /* Products */,
+				AC334912A506B9E9328CB48A /* Pods */,
+				4357CE1E3539405EB61C8B57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				CE2D1CB21FD54EA80047004F /* AppDelegate.swift */,
-				CE2D1CB41FD54EA80047004F /* ViewController.swift */,
+				CE2D1CB41FD54EA80047004F /* Login.swift */,
+				CEEDE6B31FD5709000570CA4 /* Settings.swift */,
+				CEEDE6B51FD5783A00570CA4 /* Alert.swift */,
+				CEEDE6B71FD57B7300570CA4 /* MainNavigation.swift */,
+				CEEDE6B91FD66A3400570CA4 /* Maps.swift */,
 				CE2D1CB61FD54EA80047004F /* Main.storyboard */,
 				CE2D1CBC1FD54EA80047004F /* Assets.xcassets */,
 				CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */,
@@ -74,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2D1CC41FD54EA80047004F /* Build configuration list for PBXNativeTarget "MyAssistant" */;
 			buildPhases = (
+				63FD7060038F068C07BC91EB /* [CP] Check Pods Manifest.lock */,
 				CE2D1CAB1FD54EA70047004F /* Sources */,
 				CE2D1CAC1FD54EA70047004F /* Frameworks */,
 				CE2D1CAD1FD54EA70047004F /* Resources */,
+				EF49338BE3310162DED2782F /* [CP] Embed Pods Frameworks */,
+				B09A90F560D033A2FAF29A5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +147,11 @@
 					CE2D1CAE1FD54EA70047004F = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -134,13 +186,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		63FD7060038F068C07BC91EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B09A90F560D033A2FAF29A5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF49338BE3310162DED2782F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE2D1CAB1FD54EA70047004F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2D1CB51FD54EA80047004F /* ViewController.swift in Sources */,
+				CEEDE6B81FD57B7300570CA4 /* MainNavigation.swift in Sources */,
+				CE2D1CB51FD54EA80047004F /* Login.swift in Sources */,
+				CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */,
 				CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */,
+				CEEDE6B41FD5709000570CA4 /* Settings.swift in Sources */,
+				CEEDE6B61FD5783A00570CA4 /* Alert.swift in Sources */,
 				CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,29 +380,33 @@
 		};
 		CE2D1CC51FD54EA80047004F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D39FC06B897CB995D87FE3D /* Pods-MyAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59Z84QSR34;
 				INFOPLIST_FILE = MyAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CE2D1CC61FD54EA80047004F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08BD1B7D4C947F4BABC926F6 /* Pods-MyAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59Z84QSR34;
 				INFOPLIST_FILE = MyAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
