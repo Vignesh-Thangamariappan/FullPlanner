@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>FullPlanner</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -36,17 +38,14 @@
 			</array>
 		</dict>
 	</array>
-
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
 	<string>1145249042273214</string>
 	<key>FacebookDisplayName</key>
 	<string>MyAssistant</string>
-
 	<key>LSApplicationCategoryType</key>
 	<string></string>
-
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -68,7 +67,6 @@
 	<true/>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array>
-
 		<string>MKDirectionsModeBike</string>
 		<string>MKDirectionsModeBus</string>
 		<string>MKDirectionsModeCar</string>
@@ -81,7 +79,6 @@
 	<string>This app will acces your location information always.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This app will access your location at all times.</string>
-
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app will acces your location only when you use this app</string>
 	<key>UILaunchStoryboardName</key>
