@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class Alert {
-    
     let loaderAlert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
     func showLoader(self viewController: UIViewController) {
         
