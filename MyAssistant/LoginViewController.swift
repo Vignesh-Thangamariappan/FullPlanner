@@ -31,6 +31,13 @@ class LoginViewController: UIViewController{
 //        print("LoggedOut Successfully")
 //    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     @IBAction func fbLoginButtonTapped(_ sender: Any) {
         let alertHelper = Alert()
         let loginManager = LoginManager()
