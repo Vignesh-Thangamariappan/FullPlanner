@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		12C4A5C3BAECEF055D53EF14 /* Pods_MyAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */; };
 		CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB21FD54EA80047004F /* AppDelegate.swift */; };
+
 		CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB41FD54EA80047004F /* LoginViewController.swift */; };
+
 		CE2D1CB81FD54EA80047004F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CB61FD54EA80047004F /* Main.storyboard */; };
 		CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB91FD54EA80047004F /* MyAssistant.xcdatamodeld */; };
 		CE2D1CBD1FD54EA80047004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBC1FD54EA80047004F /* Assets.xcassets */; };
 		CE2D1CC01FD54EA80047004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */; };
 		CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B01FD6726600E605CF /* MapKit.framework */; };
 		CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B21FD672C500E605CF /* CoreLocation.framework */; };
+
 		CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */; };
 		CEEDE6B61FD5783A00570CA4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B51FD5783A00570CA4 /* Alert.swift */; };
 		CEEDE6B81FD57B7300570CA4 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */; };
+
 		CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B91FD66A3400570CA4 /* Maps.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +32,9 @@
 		3D39FC06B897CB995D87FE3D /* Pods-MyAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2D1CAF1FD54EA70047004F /* MyAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D1CB21FD54EA80047004F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+
 		CE2D1CB41FD54EA80047004F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+
 		CE2D1CB71FD54EA80047004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE2D1CBA1FD54EA80047004F /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
 		CE2D1CBC1FD54EA80047004F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,9 +42,11 @@
 		CE2D1CC11FD54EA80047004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE99B8B01FD6726600E605CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE99B8B21FD672C500E605CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+
 		CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CEEDE6B51FD5783A00570CA4 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+
 		CEEDE6B91FD66A3400570CA4 /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,10 +105,12 @@
 			isa = PBXGroup;
 			children = (
 				CE2D1CB21FD54EA80047004F /* AppDelegate.swift */,
+
 				CE2D1CB41FD54EA80047004F /* LoginViewController.swift */,
 				CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */,
 				CEEDE6B51FD5783A00570CA4 /* Alert.swift */,
 				CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */,
+
 				CEEDE6B91FD66A3400570CA4 /* Maps.swift */,
 				CE2D1CB61FD54EA80047004F /* Main.storyboard */,
 				CE2D1CBC1FD54EA80047004F /* Assets.xcassets */,
@@ -239,11 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				CEEDE6B81FD57B7300570CA4 /* MainNavigationController.swift in Sources */,
 				CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */,
 				CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */,
 				CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */,
 				CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */,
+
 				CEEDE6B61FD5783A00570CA4 /* Alert.swift in Sources */,
 				CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */,
 			);

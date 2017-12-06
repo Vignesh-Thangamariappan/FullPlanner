@@ -16,27 +16,31 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         mapView.delegate = self
         let locationChennai = CLLocationCoordinate2DMake(13.0827, 80.2707)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(locationChennai, 1500, 1500), animated: true)
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+
     
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(true)
 //        getLocation()
 //    }
-    
+
     
     func getLocation() {
         
         let locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
         
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestAlwaysAuthorization()
@@ -54,6 +58,7 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
         manager.stopUpdatingLocation()
+
         let center = CLLocationCoordinate2DMake(userLocation.coordinate.latitude, userLocation.coordinate.longitude)
         
         let region = MKCoordinateRegionMakeWithDistance(center, 1500, 1500)
@@ -64,6 +69,7 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error =\(error)")
     }
+
     @IBAction func didLongPress(_ sender: UILongPressGestureRecognizer) {
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
@@ -95,4 +101,5 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             self.mapView.addAnnotation(pin)
         })
     }
+
 }

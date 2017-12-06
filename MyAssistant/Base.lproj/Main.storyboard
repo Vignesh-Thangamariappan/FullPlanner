@@ -10,10 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
+
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,10 +54,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-b3-jyI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gul-Ec-rkJ" appends="YES" id="ff3-sm-4OJ"/>
                                 </connections>
+
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,18 +71,22 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWv-uO-EAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gul-Ec-rkJ">
                     <connections>
                         <action selector="didLongPress:" destination="RVg-sh-9t5" id="FmH-rs-cLf"/>
                     </connections>
                 </pongPressGestureRecognizer>
+
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="-66.11694152923539"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jMd-Zg-hsr">
             <objects>
+
                 <tableViewController id="rbm-bI-QsJ" customClass="SettingsTableViewController" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
+
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="LDw-I5-AKm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,10 +199,12 @@
             </objects>
             <point key="canvasLocation" x="79" y="-400"/>
         </scene>
+
         <!--Main Navigation Controller-->
         <scene sceneID="mcl-Ou-v2T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xys-dP-LV7" customClass="MainNavigationController" customModule="MyAssistant" customModuleProvider="target" sceneMemberID="viewController">
+
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dux-WB-ayu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
