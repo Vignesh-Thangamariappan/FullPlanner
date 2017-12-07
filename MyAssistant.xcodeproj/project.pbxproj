@@ -15,6 +15,7 @@
 		CE2D1CBD1FD54EA80047004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBC1FD54EA80047004F /* Assets.xcassets */; };
 		CE2D1CC01FD54EA80047004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */; };
 		CE6F0B9C1FD8255F00D6A8EA /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0B9B1FD8255F00D6A8EA /* PinAnnotation.swift */; };
+		CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */; };
 		CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B01FD6726600E605CF /* MapKit.framework */; };
 		CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B21FD672C500E605CF /* CoreLocation.framework */; };
 		CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */; };
@@ -36,6 +37,7 @@
 		CE2D1CBF1FD54EA80047004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2D1CC11FD54EA80047004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE6F0B9B1FD8255F00D6A8EA /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSaverTableViewController.swift; sourceTree = "<group>"; };
 		CE99B8B01FD6726600E605CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE99B8B21FD672C500E605CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */,
 				CEEDE6B91FD66A3400570CA4 /* Maps.swift */,
 				CE6F0B9B1FD8255F00D6A8EA /* PinAnnotation.swift */,
+				CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */,
 				CE2D1CB61FD54EA80047004F /* Main.storyboard */,
 				CE2D1CBC1FD54EA80047004F /* Assets.xcassets */,
 				CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */,
@@ -244,6 +247,7 @@
 			files = (
 				CEEDE6B81FD57B7300570CA4 /* MainNavigationController.swift in Sources */,
 				CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */,
+				CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */,
 				CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */,
 				CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */,
 				CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */,
