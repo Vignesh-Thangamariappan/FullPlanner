@@ -57,4 +57,7 @@ class SettingsTableViewController: UITableViewController {
         let login = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
         navigationController?.setViewControllers([login], animated: true)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.navigationItem.title = "Settings"
+    }
 }
