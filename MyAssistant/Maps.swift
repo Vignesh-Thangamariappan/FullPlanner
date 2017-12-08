@@ -19,6 +19,7 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.showsPointsOfInterest = true
         mapView.delegate = self
         mapView.showsBuildings = true
         let locationChennai = CLLocationCoordinate2DMake(13.0827, 80.2707)
@@ -82,12 +83,14 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error =\(error)")
     }
-    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
+    @IBAction func didLongPress(_ sender: UITapGestureRecognizer) {
         
+       
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: touchCoordinate.latitude, longitude: touchCoordinate.longitude)
+        
         geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
             guard let addressDict = placemarks?[0].addressDictionary  else {
                 return
@@ -110,14 +113,22 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             destVC.delegate = self
         }
     }
+
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        let pinInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pinInfo")
+        navigationController?.pushViewController(pinInfoVC, animated: true)
+    }
     
 }
 
 extension Maps:PinSaverDelegate {
-    func setPin(notes: String) {
-        guard let pin = newPin else {
+    func setPin(notes: String,title: String?) {
+        guard let pin = newPin, let newTitle = title else {
             print("No PIN:")
             return
+        }
+        if !newTitle.isEmpty {
+        pin.title = newTitle
         }
         savedPins.append(pin)
         userData[pin] = notes
