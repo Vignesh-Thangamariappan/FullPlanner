@@ -33,6 +33,7 @@ class SettingsTableViewController: UITableViewController {
                 print("Unable to generate User Image")
             }
         }
+
         nameLabel.text = userName
         emailLabel.text = mail
     }

@@ -11,16 +11,17 @@
 		CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB21FD54EA80047004F /* AppDelegate.swift */; };
 		CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB41FD54EA80047004F /* LoginViewController.swift */; };
 		CE2D1CB81FD54EA80047004F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CB61FD54EA80047004F /* Main.storyboard */; };
-		CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB91FD54EA80047004F /* MyAssistant.xcdatamodeld */; };
 		CE2D1CBD1FD54EA80047004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBC1FD54EA80047004F /* Assets.xcassets */; };
 		CE2D1CC01FD54EA80047004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */; };
 		CE2E787E1FDABD5500AFA410 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E787D1FDABD5500AFA410 /* DatabaseController.swift */; };
 		CE2E78801FDAC50500AFA410 /* PinDescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E787F1FDAC50500AFA410 /* PinDescriptionTableViewController.swift */; };
+		CE68F3301FDE55E9001554DE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE68F32F1FDE55E9001554DE /* CoreDataManager.swift */; };
 		CE6F0B9C1FD8255F00D6A8EA /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0B9B1FD8255F00D6A8EA /* PinAnnotation.swift */; };
 		CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */; };
 		CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B01FD6726600E605CF /* MapKit.framework */; };
 		CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B21FD672C500E605CF /* CoreLocation.framework */; };
 		CEA49BFD1FDA7C50002494B1 /* DashboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */; };
+		CEBBCFB81FDE6E3D003C1E87 /* MyAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */; };
 		CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */; };
 		CEEDE6B61FD5783A00570CA4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B51FD5783A00570CA4 /* Alert.swift */; };
 		CEEDE6B81FD57B7300570CA4 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */; };
@@ -35,17 +36,19 @@
 		CE2D1CB21FD54EA80047004F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2D1CB41FD54EA80047004F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE2D1CB71FD54EA80047004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE2D1CBA1FD54EA80047004F /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
 		CE2D1CBC1FD54EA80047004F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2D1CBF1FD54EA80047004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2D1CC11FD54EA80047004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE2E787D1FDABD5500AFA410 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		CE2E787F1FDAC50500AFA410 /* PinDescriptionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinDescriptionTableViewController.swift; sourceTree = "<group>"; };
+		CE68F32F1FDE55E9001554DE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		CE6F0B9B1FD8255F00D6A8EA /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSaverTableViewController.swift; sourceTree = "<group>"; };
 		CE99B8B01FD6726600E605CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE99B8B21FD672C500E605CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewController.swift; sourceTree = "<group>"; };
+		CEBBCFB61FDE6E25003C1E87 /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
+		CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyAssistant 2.xcdatamodel"; sourceTree = "<group>"; };
 		CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CEEDE6B51FD5783A00570CA4 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -109,9 +112,11 @@
 				CE2D1CB21FD54EA80047004F /* AppDelegate.swift */,
 				CE2D1CB41FD54EA80047004F /* LoginViewController.swift */,
 				CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */,
+				CE68F32F1FDE55E9001554DE /* CoreDataManager.swift */,
 				CE2E787D1FDABD5500AFA410 /* DatabaseController.swift */,
 				CEEDE6B51FD5783A00570CA4 /* Alert.swift */,
 				CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */,
+				CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */,
 				CEEDE6B91FD66A3400570CA4 /* Maps.swift */,
 				CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */,
 				CE6F0B9B1FD8255F00D6A8EA /* PinAnnotation.swift */,
@@ -121,7 +126,6 @@
 				CE2D1CBC1FD54EA80047004F /* Assets.xcassets */,
 				CE2D1CBE1FD54EA80047004F /* LaunchScreen.storyboard */,
 				CE2D1CC11FD54EA80047004F /* Info.plist */,
-				CE2D1CB91FD54EA80047004F /* MyAssistant.xcdatamodeld */,
 			);
 			path = MyAssistant;
 			sourceTree = "<group>";
@@ -260,7 +264,8 @@
 				CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */,
 				CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */,
 				CE2E787E1FDABD5500AFA410 /* DatabaseController.swift in Sources */,
-				CE2D1CBB1FD54EA80047004F /* MyAssistant.xcdatamodeld in Sources */,
+				CE68F3301FDE55E9001554DE /* CoreDataManager.swift in Sources */,
+				CEBBCFB81FDE6E3D003C1E87 /* MyAssistant.xcdatamodeld in Sources */,
 				CEA49BFD1FDA7C50002494B1 /* DashboardCollectionViewController.swift in Sources */,
 				CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */,
 				CE6F0B9C1FD8255F00D6A8EA /* PinAnnotation.swift in Sources */,
@@ -460,12 +465,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE2D1CB91FD54EA80047004F /* MyAssistant.xcdatamodeld */ = {
+		CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE2D1CBA1FD54EA80047004F /* MyAssistant.xcdatamodel */,
+				CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */,
+				CEBBCFB61FDE6E25003C1E87 /* MyAssistant.xcdatamodel */,
 			);
-			currentVersion = CE2D1CBA1FD54EA80047004F /* MyAssistant.xcdatamodel */;
+			currentVersion = CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */;
 			path = MyAssistant.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

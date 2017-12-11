@@ -5,91 +5,119 @@
 //  Created by user on 12/8/17.
 //  Copyright © 2017 Vignesh. All rights reserved.
 //
+protocol PinDescriptionDelegate {
+    func saveContext()
+    func removePin(pin: PinAnnotation)
+}
+
 
 import UIKit
-
+import CoreData
+import MapKit
 class PinDescriptionTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var rightButton: UIBarButtonItem!
+    var pinInfo = [PinDataClass]()
+    var pinDetails: PinDataClass?
+    var delegate: PinDescriptionDelegate?
+    let alertHelper = Alert()
+    var theTitle: String?
+    var notes: String?
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var notesField: UITextField!
+    @IBOutlet weak var titleField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        titleField.delegate = self
+        notesField.delegate = self
+        if let pin = pinDetails {
+            titleField.text = pin.title
+            notesField.text = pin.notes
+        }
+        //        if let pinIdentifier = pinId {
+        //            let fetchRequest: NSFetchRequest<PinDataClass> = PinDataClass.fetchRequest()
+        //            fetchRequest.predicate = NSPredicate(format: "id==\(pinIdentifier)")
+        //
+        //            do {
+        //                pinInfo = try DatabaseController.persistentContainer.viewContext.fetch(fetchRequest)
+        //                guard let pin = pinInfo.first else {
+        //                    print("No relevant data found")
+        //                    return
+        //                }
+        //                print(pin)
+        //                titleField.text = pin.title
+        //                notesField.text = pin.notes
+        //
+        //            } catch {
+        //                print("Error: \(error)")
+        //            }
+        //
+        //        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        if rightButton.title == "Delete" {
+            guard let id = pinDetails?.id else {
+                alertHelper.showAlert(title: "Oops! Something went wrong", message: "Please try again", vc: self)
+                return
+            }
+            let fetchRequest: NSFetchRequest<PinDataClass> = PinDataClass.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == '\(id)'")
+            do {
+                let object = try DatabaseController.persistentContainer.viewContext.fetch(fetchRequest)
+                print(object)
+                if let pinData = object.first {
+                DatabaseController.persistentContainer.viewContext.delete(pinData)
+                DatabaseController.saveContext()
+                    dismiss(animated: true, completion: nil)
+                }
+            } catch {
+                print("Fetch failed due to error \(error)")
+            }
+        } else if rightButton.title == "Save" {
+            guard let title = titleField.text, let notes = notesField.text else {
+                return
+            }
+            if title.isEmpty || notes.isEmpty {
+                alertHelper.showAlert(title: "Empty Field(s)", message: "Please do not leave any field empty", vc: self)
+            } else {
+                let pinData: PinDataClass = NSEntityDescription.insertNewObject(forEntityName: "PinData", into: DatabaseController.persistentContainer.viewContext) as! PinDataClass
+                pinData.title = titleField.text
+                pinData.date = Date()
+                pinData.notes = notesField.text
+                delegate?.saveContext()
+                dismiss(animated: true, completion: nil)
+            }
+        }
     }
+    
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+extension PinDescriptionTableViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.tag == 0 {
+            theTitle = textField.text
+        } else if textField.tag == 1 {
+            notes = notesField.text
+        }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 0 {
+            notesField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        // Do not add a line break
+        return false
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if titleField.text != theTitle || notesField.text != theTitle {
+            rightButton.title = "Save"
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

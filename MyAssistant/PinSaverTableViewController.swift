@@ -10,7 +10,7 @@ protocol PinSaverDelegate {
 }
 import UIKit
 import MapKit
-class PinSaverTableViewController: UITableViewController {
+class PinSaverTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var notesField: UITextField!
     
@@ -20,36 +20,47 @@ class PinSaverTableViewController: UITableViewController {
     var location:String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleField.delegate = self
+        titleField.tag = 0
+        notesField.delegate = self
+        notesField.tag = 1
         
-        
-
         locationLabel.text = location
     }
     override func viewWillAppear(_ animated: Bool) {
         
     }
-    
-    @IBAction func cancelTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    @IBAction func saveTapped(_ sender:Any) {
-        
-        guard let theNote = notesField.text, let title = titleField.text else {
-            print("No Field Exists")
-            return }
-        if theNote.isEmpty {
-            Alert().showAlert(title: "Missing Notes", message: "Please enter notes before saving", vc: self)
-            return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 0 {
+            notesField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
         }
-        else {
-            delegate?.setPin(notes: theNote,title: title)
-            dismiss(animated: true, completion: nil)
-        }
+        // Do not add a line break
+        return false
     }
-    
+
+
+@IBAction func cancelTapped(_ sender: Any) {
+    self.dismiss(animated: true, completion: nil)
 }
 
+
+@IBAction func saveTapped(_ sender:Any) {
+    
+    guard let theNote = notesField.text, let title = titleField.text else {
+        print("No Field Exists")
+        return }
+    if theNote.isEmpty {
+        Alert().showAlert(title: "Missing Notes", message: "Please enter notes before saving", vc: self)
+        return
+    }
+    else {
+        delegate?.setPin(notes: theNote,title: title)
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+}
 

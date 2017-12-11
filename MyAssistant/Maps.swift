@@ -9,11 +9,13 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     var savedPins = [PinAnnotation]()
+    var fetchedPins = [PinDataClass]()
     var userData = [PinAnnotation:String]()
     var newPin: PinAnnotation?
     var locationManager = CLLocationManager()
@@ -22,14 +24,10 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         mapView.showsPointsOfInterest = true
         mapView.delegate = self
         mapView.showsBuildings = true
+        getPinData()
         let locationChennai = CLLocationCoordinate2DMake(13.0827, 80.2707)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(locationChennai, 1500, 1500), animated: true)
         getLocation()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,18 +35,28 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         print(savedPins)
         tabBarController?.navigationItem.title = "Maps"
-        for pin in savedPins {
-            mapView.addAnnotation(pin)
+        getPinData()
+    }
+    func getPinData() {
+        let fetchRequest: NSFetchRequest<PinDataClass> = PinDataClass.fetchRequest()
+        do {
+            fetchedPins = try DatabaseController.persistentContainer.viewContext.fetch(fetchRequest)
+            for pinData in fetchedPins {
+                if let title = pinData.title, let subtitle = pinData.subtitle {
+                    let pin = PinAnnotation(title: title, subtitle: subtitle, location: CLLocationCoordinate2DMake(pinData.locationX, pinData.locationY))
+                    mapView.addAnnotation(pin)
+                }
+            }
+        } catch {
+            print(" Unable to fetch data due to Error = \(error)")
         }
     }
     
     
     func getLocation() {
         
-        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
@@ -85,7 +93,7 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     }
     @IBAction func didLongPress(_ sender: UITapGestureRecognizer) {
         
-       
+        
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: self.mapView)
         let geoCoder = CLGeocoder()
@@ -108,17 +116,27 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSavePin" {
-            let destVC = segue.destination as! PinSaverTableViewController
-            destVC.location = (sender as! String)
-            destVC.delegate = self
+            let destVC = segue.destination as? PinSaverTableViewController
+            destVC?.location = (sender as! String)
+            destVC?.delegate = self
+        } else if segue.identifier == "toViewPin" {
+            let destVC = segue.destination as? PinDescriptionTableViewController
+            destVC?.pinDetails = sender as? PinDataClass
         }
     }
-
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        let pinInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "pinInfo")
-        navigationController?.pushViewController(pinInfoVC, animated: true)
-    }
     
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        if let pinCoordinate = view.annotation?.coordinate {
+        for pinData in fetchedPins {
+            if pinData.locationX == Double(pinCoordinate.latitude) && pinData.locationY == Double(pinCoordinate.longitude) {
+                print(pinData)
+                print(pinCoordinate)
+                let pinID = pinData
+                performSegue(withIdentifier: "toViewPin", sender: pinID)
+            }
+        }
+        }
+    }
 }
 
 extension Maps:PinSaverDelegate {
@@ -128,11 +146,44 @@ extension Maps:PinSaverDelegate {
             return
         }
         if !newTitle.isEmpty {
-        pin.title = newTitle
+            pin.title = newTitle
         }
+        let uniqueId = String.random()
+        print(uniqueId)
+        
+        let pinData: PinDataClass = NSEntityDescription.insertNewObject(forEntityName: "PinData", into: DatabaseController.persistentContainer.viewContext) as! PinDataClass
+        pinData.date = Date()
+        pinData.id = uniqueId
+        pinData.locationX = Double(pin.coordinate.latitude)
+        pinData.locationY = Double(pin.coordinate.longitude)
+        pinData.title = pin.title
+        pinData.subtitle = pin.subtitle
+        pinData.notes = notes
         savedPins.append(pin)
         userData[pin] = notes
-        
+        DatabaseController.saveContext()
+        getPinData()
+    }
+}
+extension Maps: PinDescriptionDelegate{
+    func removePin(pin: PinAnnotation) {
+        mapView.removeAnnotation(pin)
     }
     
+    func saveContext() {
+        DatabaseController.saveContext()
+    }
+}
+
+extension String {
+    
+    static func random(length: Int = 32) -> String {
+        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        var randomString: String = ""
+        for _ in 0..<length {
+            let randomValue = arc4random_uniform(UInt32(base.count))
+            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
+        }
+        return randomString
+    }
 }
