@@ -46,6 +46,8 @@ class SettingsTableViewController: UITableViewController {
             UserDefaults.standard.removeObject(forKey: "userName")
             UserDefaults.standard.removeObject(forKey: "userMail")
             UserDefaults.standard.removeObject(forKey: "userImage")
+            DatabaseController.persistentContainer.viewContext.reset()
+            DatabaseController.saveContext()
             self.loginManager.logOut()
             self.loginAgain()
         }

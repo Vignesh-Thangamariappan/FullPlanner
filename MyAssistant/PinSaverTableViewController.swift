@@ -34,10 +34,8 @@ class PinSaverTableViewController: UITableViewController, UITextFieldDelegate {
         if textField.tag == 0 {
             notesField.becomeFirstResponder()
         } else {
-            // Not found, so remove keyboard.
             textField.resignFirstResponder()
         }
-        // Do not add a line break
         return false
     }
 

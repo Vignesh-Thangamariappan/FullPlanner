@@ -49,6 +49,7 @@
 		CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewController.swift; sourceTree = "<group>"; };
 		CEBBCFB61FDE6E25003C1E87 /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
 		CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyAssistant 2.xcdatamodel"; sourceTree = "<group>"; };
+		CEE328881FDFDC9900C005A0 /* MyAssistant 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyAssistant 3.xcdatamodel"; sourceTree = "<group>"; };
 		CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CEEDE6B51FD5783A00570CA4 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
@@ -468,10 +469,11 @@
 		CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				CEE328881FDFDC9900C005A0 /* MyAssistant 3.xcdatamodel */,
 				CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */,
 				CEBBCFB61FDE6E25003C1E87 /* MyAssistant.xcdatamodel */,
 			);
-			currentVersion = CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */;
+			currentVersion = CEE328881FDFDC9900C005A0 /* MyAssistant 3.xcdatamodel */;
 			path = MyAssistant.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

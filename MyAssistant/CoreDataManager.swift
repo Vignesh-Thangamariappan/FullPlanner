@@ -17,7 +17,6 @@ final class CoreDataManager {
         self.modelName = modelName
     }
     
-    // MARK: - Core Data Stack
     private(set) lazy var managedObjectContext: NSManagedObjectContext = {
         let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         
