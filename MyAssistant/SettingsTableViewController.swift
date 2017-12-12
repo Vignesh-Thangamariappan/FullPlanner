@@ -33,6 +33,7 @@ class SettingsTableViewController: UITableViewController {
                 print("Unable to generate User Image")
             }
         }
+
         nameLabel.text = userName
         emailLabel.text = mail
     }
@@ -45,6 +46,8 @@ class SettingsTableViewController: UITableViewController {
             UserDefaults.standard.removeObject(forKey: "userName")
             UserDefaults.standard.removeObject(forKey: "userMail")
             UserDefaults.standard.removeObject(forKey: "userImage")
+            DatabaseController.persistentContainer.viewContext.reset()
+            DatabaseController.saveContext()
             self.loginManager.logOut()
             self.loginAgain()
         }
@@ -56,5 +59,8 @@ class SettingsTableViewController: UITableViewController {
     private func loginAgain() {
         let login = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login")
         navigationController?.setViewControllers([login], animated: true)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.navigationItem.title = "Settings"
     }
 }
