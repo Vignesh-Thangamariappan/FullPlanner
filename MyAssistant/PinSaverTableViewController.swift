@@ -7,9 +7,10 @@
 //
 protocol PinSaverDelegate {
     func setPin(notes: String, title:String?)
+    func cancel()
 }
 import UIKit
-import MapKit
+import GoogleMaps
 class PinSaverTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var notesField: UITextField!
@@ -41,6 +42,7 @@ class PinSaverTableViewController: UITableViewController, UITextFieldDelegate {
 
 
 @IBAction func cancelTapped(_ sender: Any) {
+    delegate?.cancel()
     self.dismiss(animated: true, completion: nil)
 }
 

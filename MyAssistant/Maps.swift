@@ -163,6 +163,10 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 }
 
 extension Maps:PinSaverDelegate {
+    func cancel() {
+        print("cancelled")
+    }
+    
     func setPin(notes: String,title: String?) {
         guard let pin = newPin, let newTitle = title, let address = address else{
             print("No PIN:")
@@ -205,15 +209,3 @@ extension Maps: NSFetchedResultsControllerDelegate {
     }
 }
 
-extension String {
-    
-    static func random(length: Int = 32) -> String {
-        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        var randomString: String = ""
-        for _ in 0..<length {
-            let randomValue = arc4random_uniform(UInt32(base.count))
-            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
-        }
-        return randomString
-    }
-}

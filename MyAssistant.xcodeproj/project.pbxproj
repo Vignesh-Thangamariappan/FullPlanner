@@ -20,6 +20,7 @@
 		CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */; };
 		CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B01FD6726600E605CF /* MapKit.framework */; };
 		CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B21FD672C500E605CF /* CoreLocation.framework */; };
+		CEA158591FE0F2F600BDA123 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA158581FE0F2F600BDA123 /* GoogleMapsViewController.swift */; };
 		CEA49BFD1FDA7C50002494B1 /* DashboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */; };
 		CEBBCFB81FDE6E3D003C1E87 /* MyAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */; };
 		CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */; };
@@ -46,6 +47,7 @@
 		CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSaverTableViewController.swift; sourceTree = "<group>"; };
 		CE99B8B01FD6726600E605CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE99B8B21FD672C500E605CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CEA158581FE0F2F600BDA123 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewController.swift; sourceTree = "<group>"; };
 		CEBBCFB61FDE6E25003C1E87 /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
 		CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyAssistant 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */,
 				CE68F32F1FDE55E9001554DE /* CoreDataManager.swift */,
 				CE2E787D1FDABD5500AFA410 /* DatabaseController.swift */,
+				CEA158581FE0F2F600BDA123 /* GoogleMapsViewController.swift */,
 				CEEDE6B51FD5783A00570CA4 /* Alert.swift */,
 				CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */,
 				CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */,
@@ -263,6 +266,7 @@
 				CEEDE6B81FD57B7300570CA4 /* MainNavigationController.swift in Sources */,
 				CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */,
 				CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */,
+				CEA158591FE0F2F600BDA123 /* GoogleMapsViewController.swift in Sources */,
 				CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */,
 				CE2E787E1FDABD5500AFA410 /* DatabaseController.swift in Sources */,
 				CE68F3301FDE55E9001554DE /* CoreDataManager.swift in Sources */,
