@@ -15,26 +15,12 @@ class LoginViewController: UIViewController{
     var dict : [String:Any] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let loginButton = LoginButton(readPermissions: [.publicProfile,.email,.userHometown,.userFriends])
-//        loginButton.center = view.center
-//        loginButton.loginBehavior = .browser
-//        loginButton.delegate = self
-//        view.addSubview(loginButton)
     }
-    
-//    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-//        print("Logged In Successfully")
-//        getFBUserData()
-//    }
-//    
-//    func loginButtonDidLogOut(_ loginButton: LoginButton) {
-//        print("LoggedOut Successfully")
-//    }
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
     }
     
@@ -80,5 +66,6 @@ class LoginViewController: UIViewController{
         navigationController?.setViewControllers([tabBar], animated: true)
     }
 }
+
 
 
