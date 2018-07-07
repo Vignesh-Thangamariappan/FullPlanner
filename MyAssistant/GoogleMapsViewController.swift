@@ -65,7 +65,7 @@ class GoogleMapsViewController: UIViewController, GMSMapViewDelegate {
             destVC?.delegate = self
         } else if segue.identifier == "toViewPin" {
             let destVC = segue.destination as? PinDescriptionTableViewController
-            destVC?.receivedData = sender as? (PinDataClass,PinAnnotation)
+            destVC?.receivedData = sender as? (PinDataClass,GMSMarker)
         }
     }
     

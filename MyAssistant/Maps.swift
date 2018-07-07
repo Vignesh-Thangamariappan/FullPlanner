@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import CoreData
 
+
 class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -142,7 +143,7 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             destVC?.delegate = self
         } else if segue.identifier == "toViewPin" {
             let destVC = segue.destination as? PinDescriptionTableViewController
-            destVC?.receivedData = sender as? (PinDataClass,PinAnnotation)
+//            destVC?.receivedData = sender as? (PinDataClass,GMSMarker)
         }
     }
     
