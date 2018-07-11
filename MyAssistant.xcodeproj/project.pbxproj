@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12C4A5C3BAECEF055D53EF14 /* Pods_MyAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */; };
+		2F5E42C220F1DB2F002BA489 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E42C120F1DB2F002BA489 /* LoginEmailViewController.swift */; };
 		CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB21FD54EA80047004F /* AppDelegate.swift */; };
 		CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB41FD54EA80047004F /* LoginViewController.swift */; };
 		CE2D1CB81FD54EA80047004F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CB61FD54EA80047004F /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		08BD1B7D4C947F4BABC926F6 /* Pods-MyAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5E42C120F1DB2F002BA489 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
 		3D39FC06B897CB995D87FE3D /* Pods-MyAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2D1CAF1FD54EA70047004F /* MyAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D1CB21FD54EA80047004F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				CE2D1CB21FD54EA80047004F /* AppDelegate.swift */,
 				CE2D1CB41FD54EA80047004F /* LoginViewController.swift */,
+				2F5E42C120F1DB2F002BA489 /* LoginEmailViewController.swift */,
 				CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */,
 				CE68F32F1FDE55E9001554DE /* CoreDataManager.swift */,
 				CE2E787D1FDABD5500AFA410 /* DatabaseController.swift */,
@@ -294,6 +297,7 @@
 				CE2E787E1FDABD5500AFA410 /* DatabaseController.swift in Sources */,
 				CE68F3301FDE55E9001554DE /* CoreDataManager.swift in Sources */,
 				CEBBCFB81FDE6E3D003C1E87 /* MyAssistant.xcdatamodeld in Sources */,
+				2F5E42C220F1DB2F002BA489 /* LoginEmailViewController.swift in Sources */,
 				CEA49BFD1FDA7C50002494B1 /* DashboardCollectionViewController.swift in Sources */,
 				CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */,
 				CE6F0B9C1FD8255F00D6A8EA /* PinAnnotation.swift in Sources */,
