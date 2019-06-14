@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import CoreData
 
+
 class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -142,7 +143,7 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             destVC?.delegate = self
         } else if segue.identifier == "toViewPin" {
             let destVC = segue.destination as? PinDescriptionTableViewController
-            destVC?.receivedData = sender as? (PinDataClass,PinAnnotation)
+//            destVC?.receivedData = sender as? (PinDataClass,GMSMarker)
         }
     }
     
@@ -163,6 +164,10 @@ class Maps: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 }
 
 extension Maps:PinSaverDelegate {
+    func cancel() {
+        print("cancelled")
+    }
+    
     func setPin(notes: String,title: String?) {
         guard let pin = newPin, let newTitle = title, let address = address else{
             print("No PIN:")
@@ -205,15 +210,3 @@ extension Maps: NSFetchedResultsControllerDelegate {
     }
 }
 
-extension String {
-    
-    static func random(length: Int = 32) -> String {
-        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        var randomString: String = ""
-        for _ in 0..<length {
-            let randomValue = arc4random_uniform(UInt32(base.count))
-            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
-        }
-        return randomString
-    }
-}

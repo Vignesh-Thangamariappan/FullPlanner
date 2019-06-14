@@ -8,14 +8,16 @@
 
 import UIKit
 import CoreData
-import MapKit
+import GoogleMaps
+
 class PinDescriptionTableViewController: UITableViewController {
     
     @IBOutlet weak var rightButton: UIBarButtonItem!
     var pinInfo = [PinDataClass]()
     var pinDetails: PinDataClass?
-    var receivedData:(PinDataClass,PinAnnotation)?
+    var receivedData:(PinDataClass,GMSMarker)?
     var pinAnnotation:PinAnnotation?
+    var pinMarker: GMSMarker?
     let alertHelper = Alert()
     var theTitle: String?
     var notes: String?
@@ -24,9 +26,9 @@ class PinDescriptionTableViewController: UITableViewController {
     @IBOutlet weak var titleField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let detail = receivedData?.0, let annotation = receivedData?.1 {
+        if let detail = receivedData?.0, let marker = receivedData?.1 {
             pinDetails = detail
-            pinAnnotation = annotation
+            pinMarker = marker
         }
         titleField.delegate = self
         notesField.delegate = self

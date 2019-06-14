@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12C4A5C3BAECEF055D53EF14 /* Pods_MyAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */; };
+		2F5E42C220F1DB2F002BA489 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E42C120F1DB2F002BA489 /* LoginEmailViewController.swift */; };
 		CE2D1CB31FD54EA80047004F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB21FD54EA80047004F /* AppDelegate.swift */; };
 		CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D1CB41FD54EA80047004F /* LoginViewController.swift */; };
 		CE2D1CB81FD54EA80047004F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D1CB61FD54EA80047004F /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */; };
 		CE99B8B11FD6726600E605CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B01FD6726600E605CF /* MapKit.framework */; };
 		CE99B8B31FD672FB00E605CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE99B8B21FD672C500E605CF /* CoreLocation.framework */; };
+		CEA158591FE0F2F600BDA123 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA158581FE0F2F600BDA123 /* GoogleMapsViewController.swift */; };
 		CEA49BFD1FDA7C50002494B1 /* DashboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */; };
 		CEBBCFB81FDE6E3D003C1E87 /* MyAssistant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */; };
 		CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */; };
@@ -31,6 +33,7 @@
 /* Begin PBXFileReference section */
 		08BD1B7D4C947F4BABC926F6 /* Pods-MyAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		16CEDFFEDA19DF9905C07829 /* Pods_MyAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5E42C120F1DB2F002BA489 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
 		3D39FC06B897CB995D87FE3D /* Pods-MyAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyAssistant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2D1CAF1FD54EA70047004F /* MyAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D1CB21FD54EA80047004F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		CE6F0B9D1FD908C000D6A8EA /* PinSaverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSaverTableViewController.swift; sourceTree = "<group>"; };
 		CE99B8B01FD6726600E605CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE99B8B21FD672C500E605CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CEA158581FE0F2F600BDA123 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		CEA49BFC1FDA7C50002494B1 /* DashboardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewController.swift; sourceTree = "<group>"; };
 		CEBBCFB61FDE6E25003C1E87 /* MyAssistant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyAssistant.xcdatamodel; sourceTree = "<group>"; };
 		CEBBCFB91FDE6F6F003C1E87 /* MyAssistant 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyAssistant 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -112,9 +116,11 @@
 			children = (
 				CE2D1CB21FD54EA80047004F /* AppDelegate.swift */,
 				CE2D1CB41FD54EA80047004F /* LoginViewController.swift */,
+				2F5E42C120F1DB2F002BA489 /* LoginEmailViewController.swift */,
 				CEEDE6B31FD5709000570CA4 /* SettingsTableViewController.swift */,
 				CE68F32F1FDE55E9001554DE /* CoreDataManager.swift */,
 				CE2E787D1FDABD5500AFA410 /* DatabaseController.swift */,
+				CEA158581FE0F2F600BDA123 /* GoogleMapsViewController.swift */,
 				CEEDE6B51FD5783A00570CA4 /* Alert.swift */,
 				CEEDE6B71FD57B7300570CA4 /* MainNavigationController.swift */,
 				CEBBCFB51FDE6E25003C1E87 /* MyAssistant.xcdatamodeld */,
@@ -213,13 +219,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyAssistant-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B09A90F560D033A2FAF29A5E /* [CP] Copy Pods Resources */ = {
@@ -228,9 +237,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,9 +257,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyAssistant/Pods-MyAssistant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -263,10 +292,12 @@
 				CEEDE6B81FD57B7300570CA4 /* MainNavigationController.swift in Sources */,
 				CE2D1CB51FD54EA80047004F /* LoginViewController.swift in Sources */,
 				CE6F0B9E1FD908C000D6A8EA /* PinSaverTableViewController.swift in Sources */,
+				CEA158591FE0F2F600BDA123 /* GoogleMapsViewController.swift in Sources */,
 				CEEDE6BA1FD66A3400570CA4 /* Maps.swift in Sources */,
 				CE2E787E1FDABD5500AFA410 /* DatabaseController.swift in Sources */,
 				CE68F3301FDE55E9001554DE /* CoreDataManager.swift in Sources */,
 				CEBBCFB81FDE6E3D003C1E87 /* MyAssistant.xcdatamodeld in Sources */,
+				2F5E42C220F1DB2F002BA489 /* LoginEmailViewController.swift in Sources */,
 				CEA49BFD1FDA7C50002494B1 /* DashboardCollectionViewController.swift in Sources */,
 				CEEDE6B41FD5709000570CA4 /* SettingsTableViewController.swift in Sources */,
 				CE6F0B9C1FD8255F00D6A8EA /* PinAnnotation.swift in Sources */,
